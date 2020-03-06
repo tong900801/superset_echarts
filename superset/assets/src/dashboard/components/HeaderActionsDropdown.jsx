@@ -173,7 +173,7 @@ class HeaderActionsDropdown extends React.PureComponent {
         {userCanSave && <MenuItem divider />}
 
         <MenuItem onClick={forceRefreshAllCharts} disabled={isLoading}>
-          {t('Force refresh dashboard')}
+          {t('Force refresh dashboardssssss')}
         </MenuItem>
 
         <RefreshIntervalModal

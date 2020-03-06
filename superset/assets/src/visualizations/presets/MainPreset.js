@@ -40,19 +40,27 @@ import TableChartPlugin from '@superset-ui/legacy-plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
 import WordCloudChartPlugin from '@superset-ui/legacy-plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
+import TimeSeriesScatterChartPlugin from '../TimeSeriesScatter/TimeSeriesScatterChartPlugin';
+import MixLineBarChartPlugin from '../MixLineBar/MixLineBarChartPlugin';
+import BasicRadarChartPlugin from '../BasicRadarChart/BasicRadarChartPlugin';
+
 // There is a known issue with bubble chart that the bubbles will not show up.
 // (<path d="NaN" />)
 // Make sure to import '@superset-ui/legacy-preset-chart-nvd3/lib'
 // Not '@superset-ui/legacy-preset-chart-nvd3',
 // which will point to '@superset-ui/legacy-preset-chart-nvd3/esm' by default
-import { AreaChartPlugin, BarChartPlugin, BubbleChartPlugin, BulletChartPlugin,
+import {
+  AreaChartPlugin, BarChartPlugin, BubbleChartPlugin, BulletChartPlugin,
   CompareChartPlugin, DistBarChartPlugin, DualLineChartPlugin, LineChartPlugin,
-  LineMultiChartPlugin, PieChartPlugin, TimePivotChartPlugin } from '@superset-ui/legacy-preset-chart-nvd3/lib';
+  LineMultiChartPlugin, PieChartPlugin, TimePivotChartPlugin
+} from '@superset-ui/legacy-preset-chart-nvd3/lib';
 import { BoxPlotChartPlugin } from '@superset-ui/preset-chart-xy/esm/legacy';
 import { DeckGLChartPreset } from '@superset-ui/legacy-preset-chart-deckgl';
 
 import FilterBoxChartPlugin from '../FilterBox/FilterBoxChartPlugin';
 import TimeTableChartPlugin from '../TimeTable/TimeTableChartPlugin';
+
+
 
 export default class MainPreset extends Preset {
   constructor() {
@@ -101,6 +109,9 @@ export default class MainPreset extends Preset {
         new TreemapChartPlugin().configure({ key: 'treemap' }),
         new WordCloudChartPlugin().configure({ key: 'word_cloud' }),
         new WorldMapChartPlugin().configure({ key: 'world_map' }),
+        new TimeSeriesScatterChartPlugin().configure({ key: 'timeseries_scatter' }),
+        new MixLineBarChartPlugin().configure({ key: 'mix_line_bar' }),
+        new BasicRadarChartPlugin().configure({ key: 'basic_radar_chart' }),
       ],
     });
   }

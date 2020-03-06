@@ -68,6 +68,9 @@ import TimeTable from '../explore/controlPanels/TimeTable';
 import Treemap from '../explore/controlPanels/Treemap';
 import WordCloud from '../explore/controlPanels/WordCloud';
 import WorldMap from '../explore/controlPanels/WorldMap';
+import TimeSeriesScatter from '../explore/controlPanels/TimeSeriesScatter';
+import MixLineBar from '../explore/controlPanels/MixLineBar';
+import BasicRadarChart from 'src/explore/controlPanels/BasicRadarChart';
 
 export default function setupPlugins() {
   new MainPreset().register();
@@ -121,7 +124,10 @@ export default function setupPlugins() {
     .registerValue('deck_path', DeckPath)
     .registerValue('deck_polygon', DeckPolygon)
     .registerValue('deck_scatter', DeckScatter)
-    .registerValue('deck_screengrid', DeckScreengrid);
+    .registerValue('deck_screengrid', DeckScreengrid)
+    .registerValue('timeseries_scatter', TimeSeriesScatter)
+    .registerValue('mix_line_bar', MixLineBar)
+    .registerValue('basic_radar_chart', BasicRadarChart);
 
   setupPluginsExtra();
 }

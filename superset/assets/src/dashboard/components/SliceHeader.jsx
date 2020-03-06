@@ -112,6 +112,7 @@ class SliceHeader extends React.PureComponent {
             onSaveTitle={updateSliceName}
             showTooltip={false}
           />
+          <h1>test</h1>
           {!!Object.values(annotationQuery).length && (
             <TooltipWrapper
               label="annotations-loading"

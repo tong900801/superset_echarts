@@ -103,7 +103,7 @@ export default class FilterIndicatorsContainer extends React.PureComponent {
                 label: labels[name] || name,
                 values:
                   isEmpty(columns[name]) ||
-                  (isDateFilter && columns[name] === 'No filter')
+                    (isDateFilter && columns[name] === 'No filter')
                     ? []
                     : [].concat(columns[name]),
                 isFilterFieldActive:
